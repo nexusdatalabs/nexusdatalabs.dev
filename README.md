@@ -1,2 +1,3 @@
 # nexusdatalabs.dev
-📃 Nexus Data Labs Website
+
+Website for Nexus Data Labs.
