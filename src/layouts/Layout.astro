@@ -19,21 +19,23 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 220, 220, 220;
-		--accent-light: 240, 60, 60;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+	body {
+		background: #343a40;
+		line-height: 1.4;
+		font-family: Inter, sans-serif;
+		font-size: 22px;
+		color: #f1f3f5;
+		padding: 0 10px;
+		margin: 40px auto;
+		max-width: 600px;
 	}
 
-	html {
-		font-family: Inter, system-ui, sans-serif;
-		background: #111;
+	h1 {
+		font-size: 3em;
+		color: #ff6b6b;
+		font-family: "Courier New", Courier, monospace;
+		font-weight: 400;
 	}
 </style>
