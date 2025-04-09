@@ -1,3 +1,14 @@
 <svg width="800" height="800" viewBox="-1.6 -1.6 19.2 19.2" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" stroke-width="0">
-    <path d="m8 0 7 4v8l-7 4-7-4V4l7-4Z" fill="#333" stroke="none" />
+    <style>
+        path {
+            --icon-fill: #333;
+            fill: var(--icon-fill);
+        }
+        @media (prefers-color-scheme: dark) {
+            path {
+                --icon-fill: #eee;
+            }
+        }
+    </style>
+    <path d="m8 0 7 4v8l-7 4-7-4V4l7-4Z" stroke="none" />
 </svg>
