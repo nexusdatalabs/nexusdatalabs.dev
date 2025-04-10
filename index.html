@@ -1,96 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Helping people coordinate better making data easy to use."
+        />
+        <title>Nexus Data Labs</title>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="canonical" href="https://nexusdatalabs.dev/" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Helping people coordinate better making data easy to use.">
-    <title>Nexus Data Labs</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="canonical" href="https://nexusdatalabs.dev/">
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Nexus Data Labs" />
+        <meta
+            property="og:description"
+            content="Helping people coordinate better making data easy to use."
+        />
+        <meta property="og:url" content="https://nexusdatalabs.dev/" />
+        <meta
+            property="og:image"
+            content="https://nexusdatalabs.dev/banner.png"
+        />
 
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Nexus Data Labs">
-    <meta property="og:description" content="Helping people coordinate better making data easy to use.">
-    <meta property="og:url" content="https://nexusdatalabs.dev/">
-    <meta property="og:image" content="https://nexusdatalabs.dev/banner.png">
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Nexus Data Labs" />
+        <meta
+            name="twitter:description"
+            content="Helping people coordinate better making data easy to use."
+        />
+        <meta
+            name="twitter:image"
+            content="https://nexusdatalabs.dev/banner.png"
+        />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Nexus Data Labs">
-    <meta name="twitter:description" content="Helping people coordinate better making data easy to use.">
-    <meta name="twitter:image" content="https://nexusdatalabs.dev/banner.png">
+        <!-- JSON-LD structured data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Nexus Data Labs",
+                "url": "https://nexusdatalabs.dev/",
+                "description": "Helping people coordinate better making data easy to use."
+            }
+        </script>
 
-    <!-- JSON-LD structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Nexus Data Labs",
-      "url": "https://nexusdatalabs.dev/",
-      "description": "Helping people coordinate better making data easy to use."
-    }
-    </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
 
-    <style>
-        body {
-            line-height: 1.4;
-            font-family: "Source Code Pro", monospace;
-            font-optical-sizing: auto;
-            font-size: 22px;
-            color: #222222;
-            padding: 0 10px;
-            margin: 40px auto;
-            max-width: 600px;
-        }
+            :root {
+                --background-color: var(--background-color-light);
+                --text-color: var(--text-color-light);
+                --link-underline-color: #b1b1b1;
 
-        h1 {
-            font-size: 2.6em;
-            color: #333333;
-        }
+                --background-color-light: #fff;
+                --background-color-dark: #000;
+                --text-color-light: #000;
+                --text-color-dark: #fff;
+            }
 
-        .logo {
-            text-align: center;
-            margin: 0 auto;
-        }
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-            border-bottom: 1px solid #b1b1b1;
-        }
-    </style>
-</head>
+            html {
+                scrollbar-gutter: stable;
+            }
 
-<body>
-    <div class="logo">
-        <h1 aria-hidden="true">⬣</h1>
-    </div>
+            body {
+                font-family: "Source Code Pro", monospace;
+                font-size: 1rem;
+                font-optical-sizing: auto;
+                text-align: justify;
+                line-height: 1.4;
 
-    <h1>Nexus Data Labs</h1>
+                background-color: var(--background-color);
+                color: var(--text-color);
 
-    <p>
-        Protocols create Systems.
-        Code creates Tools.
-    </p>
-    <p>
-        Data creates <strong>Knowledge</strong>.
-        <br>
-        Data drives <strong>Coordination</strong>.
-    </p>
+                margin: 0 auto;
+                padding: 1rem;
+                max-width: min(90%, 1024px);
+            }
 
-    <p> We help people <strong>coordinate better using data</strong>.</p>
+            .logo {
+                text-align: center;
+                font-size: 5rem;
+            }
 
-    <footer>
-        <p>
-            <a href="mailto:davidgasquez@gmail.com">Reach Out</a> or explore our projects <a
-                href="https://github.com/nexusdatalabs">on GitHub</a>.
-        </p>
-    </footer>
-</body>
+            .logo a {
+                border-bottom: none;
+            }
 
+            a {
+                color: inherit;
+                text-decoration: none;
+                border-bottom: 1px solid var(--link-underline-color);
+            }
+
+            a:hover,
+            a:focus,
+            a:active {
+                background-color: var(--text-color);
+                color: var(--background-color);
+            }
+
+            footer {
+                margin-top: 40px;
+                font-size: 14px;
+                text-align: center;
+                padding: 20px 0;
+                border-top: 1px solid #eaeaea;
+            }
+
+            .navbar {
+                margin-bottom: 2em;
+            }
+
+            .navbar a {
+                border-bottom: none;
+            }
+
+            .navbar-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .navbar-brand a {
+                display: flex;
+                align-items: center;
+                border-bottom: none;
+            }
+
+            .navbar-logo {
+                font-size: 1.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .navbar-links {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                justify-content: flex-end;
+                gap: 2em;
+                margin: 0;
+                flex-grow: 1;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 3rem;
+            }
+
+            h2,
+            h3 {
+                margin-top: 2em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-brand">
+                    <a href="/"
+                        ><span class="navbar-logo">⬣</span> Nexus Data Labs</a
+                    >
+                </div>
+                <ul class="navbar-links">
+                    <li><a href="/">About</a></li>
+                    <li>
+                        <a href="https://github.com/nexusdatalabs">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="logo">⬣</div>
+
+        <div style="text-align: center; font-size: 1.2em">
+            <p>Protocols create Systems. Code creates Tools.</p>
+            <p>
+                Data creates <strong>Knowledge</strong>.
+                <br />
+                Data drives <strong>Coordination</strong>.
+            </p>
+
+            <p>We help people <strong>coordinate better using data</strong>.</p>
+        </div>
+    </body>
 </html>
