@@ -1,0 +1,39 @@
+---
+import Head from "../components/Head.astro";
+---
+
+<html lang="en">
+	<Head
+		title="Nexus Data Labs"
+		author="Nexus Team"
+		description="Helping people coordinate better making data easy to use."
+	/>
+	<body>
+		<button
+			id="theme-toggle"
+			class="theme-toggle"
+			aria-label="Toggle dark mode"
+		>
+			Theme
+		</button>
+		<slot />
+	</body>
+</html>
+
+<style>
+	.theme-toggle {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		z-index: 100;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 8px;
+		font-family: var(--font-monospace);
+		color: var(--text-color);
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+</style>
