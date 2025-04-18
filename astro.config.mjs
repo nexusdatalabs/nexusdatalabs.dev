@@ -5,17 +5,13 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
     site: "https://nexusdatalabs.dev",
-
     prefetch: {
         prefetchAll: true,
     },
-
     trailingSlash: "never",
-
     build: {
         format: "file",
     },
-
     experimental: {
         clientPrerender: true,
         fonts: [{
@@ -24,6 +20,5 @@ export default defineConfig({
             cssVariable: "--font-monospace"
         }]
     },
-
     integrations: [sitemap()]
 });
