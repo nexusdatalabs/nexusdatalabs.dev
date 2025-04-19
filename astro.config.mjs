@@ -15,7 +15,7 @@ export default defineConfig({
     experimental: {
         clientPrerender: true,
         fonts: [{
-            provider: fontProviders.google(),
+            provider: fontProviders.bunny(),
             name: "JetBrains Mono",
             cssVariable: "--font-monospace"
         }]
