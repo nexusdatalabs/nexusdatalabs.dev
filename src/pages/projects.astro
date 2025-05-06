@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <a href="/">
+        <div class="logo">⬣</div>
+    </a>
+    <h1>Nexus Data Labs Projects</h1>
+
+    <div class="projects">
+        <a
+            href="https://filecoindataportal.xyz/"
+            target="_blank"
+            class="project"
+        >
+            <h2>Filecoin Data Portal</h2>
+            <p>
+                A portal for exploring and accessing data stored on the Filecoin
+                network.
+            </p>
+        </a>
+
+        <a href="https://grantsdataportal.xyz/" target="_blank" class="project">
+            <h2>Grants Data Portal</h2>
+            <p>
+                A comprehensive portal for exploring and analyzing grant data
+                across various ecosystems.
+            </p>
+        </a>
+    </div>
+
+    <p class="back-link">
+        <a href="/">← Back to Home</a>
+    </p>
+</Layout>
+
+<style>
+    .logo {
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
+
+    .projects {
+        margin: 2rem 0;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .project {
+        display: block;
+        flex: 1;
+        margin-bottom: 3rem;
+        border: 1px solid var(--text-color);
+        padding: 1.5rem;
+        color: var(--text-color);
+        text-decoration: none;
+        transition:
+            background-color 0.2s,
+            color 0.2s;
+    }
+
+    .project:hover,
+    .project:focus {
+        background-color: var(--text-color);
+        color: var(--background-color);
+    }
+
+    .project h2 {
+        margin-top: 0;
+    }
+
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+
+    .back-link a {
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        border: 1px solid var(--text-color);
+        margin-right: 1rem;
+    }
+
+    .back-link a:hover,
+    .back-link a:focus,
+    .back-link a:active {
+        background-color: var(--text-color);
+        color: var(--background-color);
+    }
+
+    .back-link {
+        margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .projects {
+            flex-direction: column;
+        }
+    }
+</style>
