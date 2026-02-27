@@ -1,41 +1,36 @@
 ---
-import Head from "../components/Head.astro";
+import Head from "../components/Head.astro"
+import "../styles/global.css"
+
+interface Props {
+    title?: string
+    description?: string
+    canonicalUrl?: string
+    noindex?: boolean
+}
+
+const {
+    title = "Nexus Data Labs | Coordination Through Data",
+    description = "Helping people coordinate better making data easy to use.",
+    canonicalUrl = Astro.url.pathname,
+    noindex = false,
+} = Astro.props
 ---
 
 <html lang="en">
-	<head>
-		<Head
-			title="Nexus Data Labs | Coordination Through Data"
-			author="Nexus Team"
-			description="Helping people coordinate better making data easy to use."
-		/>
-	</head>
-	<body>
-		<button
-			id="theme-toggle"
-			class="theme-toggle"
-			aria-label="Toggle dark mode"
-		>
-			Theme
-		</button>
-		<slot />
-	</body>
-</html>
+    <head>
+        <Head
+            title={title}
+            description={description}
+            canonicalUrl={canonicalUrl}
+            noindex={noindex}
+        />
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
 
-<style>
-	.theme-toggle {
-		position: fixed;
-		top: 1rem;
-		right: 1rem;
-		z-index: 100;
-		background: transparent;
-		border: none;
-		cursor: pointer;
-		padding: 8px;
-		font-family: var(--font-monospace);
-		color: var(--text-color);
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.5px;
-	}
-</style>
+        <main id="main-content" tabindex="-1">
+            <slot />
+        </main>
+    </body>
+</html>

@@ -1,48 +1,32 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout>
-	<div class="logo">⬣</div>
-	<h1>Nexus Data Labs</h1>
+    <span class="logo" aria-hidden="true">⬣</span>
+    <h1>Nexus Data Labs</h1>
 
-	<p>Protocols create <em>Systems</em>. Code creates <em>Tools</em>.</p>
-	<p>
-		Data creates <em>Knowledge</em>. Data drives <em>Coordination</em>.
-	</p>
+    <p>Protocols create <em>Systems</em>. Code creates <em>Tools</em>.</p>
+    <p>Data creates <em>Knowledge</em>. Data drives <em>Coordination</em>.</p>
+    <p>We help people <em>coordinate better using data</em>.</p>
 
-	<p>We help people <em>coordinate better using data</em>.</p>
-
-	<p>
-		<a href="https://github.com/nexusdatalabs" target="_blank">GITHUB</a>
-		<a href="/projects">PROJECTS</a>
-		<a href="mailto:davidgasquez@gmail.com">EMAIL</a>
-	</p>
+    <nav aria-label="Primary">
+        <ul class="button-list">
+            <li>
+                <a
+                    class="button-link"
+                    href="https://github.com/nexusdatalabs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </li>
+            <li>
+                <a class="button-link" href="mailto:davidgasquez@gmail.com">
+                    Email
+                </a>
+            </li>
+        </ul>
+    </nav>
 </Layout>
-
-<style>
-	.logo {
-		font-size: 4rem;
-		margin-top: 2rem;
-	}
-
-	a {
-		color: var(--text-color);
-		text-decoration: none;
-		padding: 0.5rem 1rem;
-		display: inline-block;
-		border: 1px solid var(--text-color);
-		margin-right: 2rem;
-	}
-
-	a:last-child {
-		margin-right: 0;
-	}
-
-	a:hover,
-	a:focus,
-	a:active {
-		background-color: var(--text-color);
-		color: var(--background-color);
-	}
-</style>
