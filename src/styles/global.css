@@ -69,6 +69,10 @@ a:focus-visible {
     text-align: center;
 }
 
+#main-content:focus {
+    outline: none;
+}
+
 .logo {
     display: block;
     font-size: 4rem;
