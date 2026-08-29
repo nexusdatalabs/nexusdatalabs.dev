@@ -1,11 +1,6 @@
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 1.5rem;
-    --space-xl: clamp(2rem, 6vw, 5rem);
     color-scheme: light dark;
     font-family: var(--font-jetbrains-mono);
     font-synthesis: none;
@@ -25,16 +20,10 @@
     box-sizing: border-box;
 }
 
-html,
 body {
     margin: 0;
-    min-height: 100%;
-}
-
-body {
     background: var(--background-color);
     color: var(--text-color);
-    -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
@@ -49,30 +38,31 @@ a {
 
 a:focus-visible {
     outline: 2px solid currentColor;
-    outline-offset: var(--space-xs);
+    outline-offset: 0.25rem;
 }
 
 .skip-link {
     position: absolute;
-    left: var(--space-md);
-    top: -999px;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid currentColor;
     background: var(--background-color);
     color: var(--text-color);
-    border: 1px solid currentColor;
-    padding: var(--space-sm) 0.75rem;
     text-decoration: none;
-    z-index: 1000;
+    transform: translateY(calc(-100% - 1.25rem));
 }
 
 .skip-link:focus {
-    top: var(--space-md);
+    transform: none;
 }
 
-#main-content {
+main {
     width: min(calc(100% - 2rem), 72rem);
     min-height: 100dvh;
     margin: 0 auto;
-    padding: var(--space-xl) 0;
+    padding: clamp(2rem, 6vw, 5rem) 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +70,7 @@ a:focus-visible {
     text-align: center;
 }
 
-#main-content:focus {
+main:focus {
     outline: none;
 }
 
@@ -89,7 +79,7 @@ h1 {
 }
 
 p {
-    margin-block: var(--space-sm) 0;
+    margin-block: 0.5rem 0;
     text-wrap: pretty;
 }
 
@@ -100,14 +90,14 @@ p {
     margin: 0;
 }
 
-.button-list {
-    list-style: none;
+nav ul {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: var(--space-md);
-    margin: var(--space-lg) 0 0;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0 0;
     padding: 0;
+    list-style: none;
 }
 
 .button-link {
@@ -115,18 +105,21 @@ p {
     min-height: 2.75rem;
     align-items: center;
     justify-content: center;
-    padding: var(--space-sm) var(--space-md);
+    padding: 0.5rem 1rem;
     border: 1px solid currentColor;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    touch-action: manipulation;
 }
 
 .button-link:hover,
 .button-link:focus-visible {
     background: var(--text-color);
     color: var(--background-color);
+}
+
+.button-link:focus-visible {
+    outline-color: var(--text-color);
 }
 
 .button-link:active {
